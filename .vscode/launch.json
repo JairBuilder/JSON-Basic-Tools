@@ -1,0 +1,15 @@
+{
+    "version": "0.0.1",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Start Application",
+            "program": "${workspaceFolder}/build/main",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "cmake-build",
+            "console": "internalConsole"
+        }
+    ]
+}
