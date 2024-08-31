@@ -8,6 +8,7 @@
 *~.bak
 #log file
 *.log
+core.*
 #ignore some folder
 /build
 /.cache

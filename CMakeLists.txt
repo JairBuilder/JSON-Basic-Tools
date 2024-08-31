@@ -12,4 +12,5 @@ include_directories(./)
 file(GLOB_RECURSE SOURCES "src/*.*")
 
 
-add_executable(main ${SOURCES} ./test/test_generator.cpp)
+#add_executable(main ${SOURCES} ./test/test_generator.cpp)
+add_executable(main ${SOURCES} ./test/test_parser.cpp)

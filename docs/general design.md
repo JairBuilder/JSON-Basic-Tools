@@ -152,3 +152,8 @@ Value: shared_ptr<JSON_VALUE>
         1. JSON_NULL()
         1. string str() override
         1. string type() override
+## 设计思路
+- 解析时索引idx的移动
+    1. 解析一个键值对后，指向该键值对最后一个字符，下一个字符是逗号或括号，因为需要依据情况做相应判断
+    1. 同上，每解析一个值都指向最后一个字符，这也是一直保持上一条的原因
+    1. 解析键后，idx指向冒号，所以解析值之前idx都指向冒号

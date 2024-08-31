@@ -1,0 +1,30 @@
+{
+    "address": {
+        "city": "Anytown",
+        "state": "CA",
+        "street": "123 Main St"
+    },
+    "age": 30,
+    "favorite_color": {
+        "name": "blue",
+        "rgb": [
+            0,
+            0,
+            255
+        ]
+    },
+    "favorite_food": {
+        "name": "pizza",
+        "toppings": [
+            "pepperoni",
+            "mushrooms"
+        ]
+    },
+    "is_student": true,
+    "name": "John",
+    "scores": [
+        100,
+        90,
+        80
+    ]
+}

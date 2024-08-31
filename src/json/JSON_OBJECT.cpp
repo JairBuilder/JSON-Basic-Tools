@@ -3,10 +3,11 @@
 #include "JSON_STRING.h"
 #include "JSON_DOUBLE.h"
 #include "JSON_BOOL.h"
+#include "src/json/typedef.h"
 
 using namespace json;
 
-void JSON_OBJECT::add(const Key& key, const std::string& value) {
+void JSON_OBJECT::add(const Key& key, const char * value) {
     data[key] = std::make_shared<JSON_STRING>(value);
 }
 void JSON_OBJECT::add(const Key& key, const int& value) {
@@ -29,11 +30,19 @@ void JSON_OBJECT::add(const Key& key, const JSON_ARRAY& value) {
     data[key] = std::make_shared<JSON_ARRAY>(value);
 }
 
+void JSON_OBJECT::add(const Key& key, const Value& value) {
+    data[key] = value;
+}
+
+void JSON_OBJECT::add(std::pair<const Key &, const Value &> pair) {
+    data[pair.first] = pair.second;
+}
+
 void JSON_ARRAY::add(const int& value) {
     this->value.push_back(std::make_shared<JSON_INT>(value));
 }
 
-void JSON_ARRAY::add(const std::string& value) {
+void JSON_ARRAY::add(const char * value) {
     this->value.push_back(std::make_shared<JSON_STRING>(value));
 }
 
@@ -51,6 +60,10 @@ void JSON_ARRAY::add(const JSON_ARRAY& value) {
 
 void JSON_ARRAY::add(const JSON_OBJECT& value) {
     this->value.push_back(std::make_shared<JSON_OBJECT>(value));
+}
+
+void JSON_ARRAY::add(const Value& value) {
+    this->value.push_back(value);
 }
 
 std::string JSON_ARRAY::str() {
