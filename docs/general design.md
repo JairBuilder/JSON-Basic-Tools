@@ -127,7 +127,6 @@ Value: shared_ptr<JSON_VALUE>
         1. JSON_ARRAY(vector<Value> value)
         1. string str() override
         1. string type() override
-        1. JSON_VALUE& operator=(const vector<Value>& other) override
         1. add(const int &) 添加int元素
         1. add(const string &) 添加string元素
         1. add(const double &) 添加double元素
@@ -143,7 +142,6 @@ Value: shared_ptr<JSON_VALUE>
         1. JSON_OBJECT(JSON value)
         1. string str() override
         1. string type() override
-        1. JSON_VALUE& operator=(const JSON &) override
         1. add(const Key &, const Value &) 添加键值对
 
 - JSON_NULL

@@ -1,0 +1,15 @@
+{
+    "address": {
+        "city": true,
+        "state": true,
+        "street": true
+    },
+    "age": 30,
+    "is_student": true,
+    "name": true,
+    "scores": [
+        100,
+        90,
+        80
+    ]
+}

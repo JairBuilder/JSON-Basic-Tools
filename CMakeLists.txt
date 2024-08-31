@@ -1,6 +1,15 @@
 cmake_minimum_required(VERSION 3.18)
 
-project(CPP)
+project(JSON_Basic_Tools)
 
-add_executable(main main.cpp)
-target_compile_features(main PRIVATE cxx_std_17)
+set(CMAKE_CXX_STANDARD 11)
+
+add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
+add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
+
+include_directories(./)
+
+file(GLOB_RECURSE SOURCES "src/*.*")
+
+
+add_executable(main ${SOURCES} ./test/test_generator.cpp)
