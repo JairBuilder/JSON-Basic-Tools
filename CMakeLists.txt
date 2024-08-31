@@ -7,10 +7,12 @@ set(CMAKE_CXX_STANDARD 11)
 add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
 add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 
-include_directories(./)
+file (GLOB SOURCES
+    ./src/parser/*.cpp
+    ./src/parser/*.h
+    ./src/json/*.cpp
+    ./src/json/*.h
+)
 
-file(GLOB_RECURSE SOURCES "src/*.*")
-
-
-#add_executable(main ${SOURCES} ./test/test_generator.cpp)
-add_executable(main ${SOURCES} ./test/test_parser.cpp)
+add_library(JSON_Basic_Tools SHARED ${SOURCES})
+target_include_directories(JSON_Basic_Tools PUBLIC include)

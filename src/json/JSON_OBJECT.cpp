@@ -3,7 +3,7 @@
 #include "JSON_STRING.h"
 #include "JSON_DOUBLE.h"
 #include "JSON_BOOL.h"
-#include "src/json/typedef.h"
+#include "typedef.h"
 
 using namespace json;
 

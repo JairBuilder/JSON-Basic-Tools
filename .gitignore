@@ -13,3 +13,4 @@ core.*
 /build
 /.cache
 /.vscode
+/Build

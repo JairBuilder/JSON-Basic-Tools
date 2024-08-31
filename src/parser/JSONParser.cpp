@@ -77,7 +77,6 @@ std::string JSONParser::next_number() {
         throw std::runtime_error("JSONParser: next_number: idx out of range");
     }
     if (number_chars.find(json[idx]) == number_chars.end()) {
-        std::cout<<"error char: "<<json[idx]<<std::endl;
         throw std::runtime_error("JSONParser: next_number: not a number");
     }
     std::string str;
